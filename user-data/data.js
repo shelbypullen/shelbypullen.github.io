@@ -33,26 +33,8 @@ export const events = [
 ];
 
 // Publications: category, authors, year, title, status, links, tags. Optional citation: { heading, refs, bibtex } (same as software).
-export const publications = [{},];
-//export const publications = [
-  {
-    category: "",
-    authors: [""],
-    year: "",
-    title: "",
-    status: "",
-    links: [{ label: "Preprint", url: "" }],
-    tags: [""],
-    citation: {
-      heading: "Please cite this work as:",
-      refs: [
-        "Olivieri A., Pogudin G., Kramer B. (2026). Quadratization of Autonomous Partial Differential Equations: Theory and Algorithms. arXiv preprint: \
-        <a href=\"https://arxiv.org/abs/2602.22371\" target=\"_blank\" rel=\"noopener\">arxiv:2602.22371</a>",
-      ],
-      bibtex: 
-        
-},
-    },
+export const publications = [];
+
  
 // Teaching: title (class name), date, text (description)
 export const teaching = [
