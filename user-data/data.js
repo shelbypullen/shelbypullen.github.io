@@ -113,3 +113,39 @@ export const publications = [
     tags: ["Symbolic Computation", "PDEs", "Discrete optimization", "Branch and bound", "Incremental Nearest Neighbor"],
   },
 ];
+
+
+// Teaching: title (class name), date, text (description)
+export const teaching = [
+  {
+    title: "Linear Systems Theory (MAE 280A) - Teaching Assistant",
+    date: "Fall 2025",
+    text: "<strong>Graduate</strong> course at the <strong>Department of Mechanical and Aerospace Engineering</strong>, <strong>University of California San Diego</strong>. \
+    This course covers the linear algebra concepts of linear algebra (inner products, outer products, vector norms, matrix norms, \
+    least squares problems, Jordan forms, coordinate transformations, positive definite matrices, etc.), \
+    properties of linear dynamic systems described by ODEs (observability, controllability, detectability, \
+    stabilizability, trackability, optimality), \
+    and control systems design (state estimation, pole assignment, linear quadratic control).",
+  },
+  {
+    title: "Algorithm and Data Structures (CC3001) - Teaching Assistant",
+    date: "Fall 2023",
+    text: "<strong>Undergraduate</strong> course at the <strong>Department of Computer Science</strong>, <strong>FCFM</strong>, <strong>Universidad de Chile</strong>. \
+    This course covers basic concepts of efficient algorithm design (iterative and recursive), \
+    algorithm analysis, and data structures (arrays, linked structures, graphs).",
+  },
+  {
+    title: "Introduction to Programming (CC1002) - Teaching Assistant",
+    date: "Spring 2021",
+    text: "<strong>Undergraduate</strong> course at the <strong>Department of Computer Science</strong>, <strong>FCFM</strong>, <strong>Universidad de Chile</strong>. \
+    This course introduces students to the basics concepts of programming. Students learn to solve problems methodically, writing programs that respond to a variety\
+    of requests and purposes. ",
+  },
+  {
+    title: "Computational Tools for Engineering and Sciences (CC1000) - Teaching Assistant",
+    date: "Fall 2021",
+    text: "<strong>Undergraduate</strong> course at the <strong>Department of Computer Science</strong>, <strong>FCFM</strong>, <strong>Universidad de Chile</strong>. \
+    This course teaches basic computational tools such as Excel, R, MATLAB, Maple, and LaTeX. The students then apply these tools to solve simple engineering and \
+    science problems.",
+  },
+];
