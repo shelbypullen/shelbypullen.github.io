@@ -1,0 +1,597 @@
+/* Academic minimal layout – black on white */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000;
+  background: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.site-title {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+/* Tab panels */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Home tab */
+.home-content {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .home-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.home-text-col {
+  min-width: 0;
+}
+
+#home-bio p {
+  margin: 0 0 1em;
+}
+
+#home-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Home tab: underline text links (bio), keep button and social icons as-is */
+#panel-home a {
+  text-decoration: underline;
+}
+
+#panel-home .btn-cv,
+#panel-home .social-icon {
+  text-decoration: none;
+}
+
+.home-actions {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+}
+
+.btn-cv:hover {
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+}
+
+.home-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.social-icon:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon--email {
+  width: 40px;
+  height: 40px;
+  font-size: 1.75rem;
+}
+
+/* Tab content */
+.tab-content-inner {
+  padding: 1rem 0;
+}
+
+.placeholder-text {
+  color: #666;
+  font-style: italic;
+}
+
+/* Same separation (2rem) between categories/sections across all tabs */
+.research-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 1rem;
+  padding-top: 0.5rem;
+}
+
+.research-section-title:not(:first-child) {
+  padding-top: 2rem;
+  margin-top: 0;
+}
+
+#research-thesis-section {
+  margin-top: 2rem;
+}
+
+/* News / Events list */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.news-entry {
+  max-width: 100%;
+}
+
+.news-entry__date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.news-entry__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 0.4rem;
+  line-height: 1.4;
+}
+
+.news-entry__title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.news-entry__title a:hover {
+  opacity: 0.8;
+}
+
+/* Events tab: show hyperlinks as underlined */
+#panel-events a {
+  text-decoration: underline;
+}
+
+#panel-events .news-entry__title a:hover {
+  opacity: 0.8;
+}
+
+.news-entry__details {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Teaching tab */
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.teaching-entry {
+  max-width: 100%;
+}
+
+.teaching-entry__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 0.4rem;
+  line-height: 1.4;
+}
+
+.teaching-entry__date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.teaching-entry__text {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Publications */
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.pub-entry {
+  max-width: 100%;
+}
+
+.pub-entry__authors {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 0.35rem;
+  line-height: 1.4;
+}
+
+.pub-entry__authors strong {
+  font-weight: 700;
+}
+
+.pub-entry__title-wrap {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pub-entry__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+
+.pub-entry__status {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.pub-entry__links {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pub-entry__links li {
+  padding: 0;
+}
+
+/* Shared pill style for research and software tab links/buttons */
+.pub-entry__links a,
+.pub-entry__citation-btn,
+.software-entry__links a,
+.software-entry__citation-btn {
+  display: inline-block;
+  padding: 0.2rem 0.9rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.35;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.pub-entry__links a,
+.software-entry__links a {
+  text-decoration: none;
+  border: none;
+}
+
+.pub-entry__citation-btn,
+.software-entry__citation-btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.pub-entry__links a:hover,
+.pub-entry__citation-btn:hover,
+.software-entry__links a:hover,
+.software-entry__citation-btn:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+.pub-entry__tags {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0.4rem 0 0;
+  line-height: 1.4;
+}
+
+/* Software tab: title, pill buttons (repo, DOI), description */
+.software-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.software-entry {
+  max-width: 100%;
+}
+
+.software-entry__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 0.4rem;
+  line-height: 1.4;
+}
+
+.software-entry__subtitle {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.software-entry__links {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.software-entry__links li {
+  padding: 0;
+}
+
+
+.software-entry__description {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Citation modal */
+.citation-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.citation-modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.citation-modal__box {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow: auto;
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.citation-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+}
+
+.citation-modal__close:hover {
+  opacity: 0.7;
+}
+
+.citation-modal__content {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+.citation-modal__heading {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.citation-modal__list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.citation-modal__ref {
+  margin-bottom: 0.75rem;
+}
+
+.citation-modal__ref:last-child {
+  margin-bottom: 0;
+}
+
+.citation-modal__ref a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.citation-modal__bibtex-wrap {
+  margin-top: 1.25rem;
+}
+
+.citation-modal__bibtex-btn {
+  display: inline-block;
+  padding: 0.2rem 0.9rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.35;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.citation-modal__bibtex-btn:hover {
+  opacity: 0.85;
+}
+
+/* Copy notification toast */
+.copy-notification {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  padding: 0.6rem 1.25rem;
+  background: #333;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.copy-notification--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
