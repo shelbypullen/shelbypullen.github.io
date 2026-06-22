@@ -12,7 +12,7 @@ export const bio = [
 export const news = [
   {
     date: "August 2026",
-    details: "I will me attending the workshop on High Powered Computing and Data Science at the San Diego Super Commputing Center. I'm excited to learn about efficiently map computational problems onto HPC architectures."
+    details: "I will be attending the workshop on High Powered Computing and Data Science at the San Diego Super Computer Center. I'm excited to learn about how to efficiently map computational problems onto HPC architectures."
   },
     {
       date: "September 2025",
