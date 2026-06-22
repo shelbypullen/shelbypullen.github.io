@@ -136,8 +136,9 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
-btn-cv {
+.btn-cv {
   display: block;
+  width: fit-content;
   padding: 0.6rem 1.5rem;
   font-size: 0.85rem;
   font-weight: 600;
