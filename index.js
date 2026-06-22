@@ -3,8 +3,6 @@ import {
   news,
   events,
   publications,
-  teaching,
-  software,
 } from "./user-data/data.js";
 
 function populateBio(items, id) {
