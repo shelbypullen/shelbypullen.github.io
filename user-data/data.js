@@ -42,7 +42,7 @@ export const teaching = [
     title: "Introduction to Engineering Computations (MAE 1117) - Learning Assistant",
     date: "Fall 2023",
     text: "<strong>Undegraduate</strong> course at the <strong>Department of Mechanical and Aerospace Engineering</strong>, <strong>George Washington University</strong>. \
-    This course covers an overview of Python for engineering applications, including using the libraries: NumPy, SciPy, Pandas, Matplotlib etc. \
-      I hosted office hours and inclass assistance to the professor.",
+    This course covers an overview of Python for engineering applications, including the libraries NumPy, SciPy, Pandas, and Matplotlib. \
+      I hosted office hours and provided in-class assistance to the professor.",
   },
 ];
