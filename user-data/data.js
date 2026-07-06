@@ -35,16 +35,18 @@ export const events = [
 // Publications: category, authors, year, title, status, links, tags. Optional citation: { heading, refs, bibtex } (same as software).
 export const publications = [
   {
-    category: "UC San Diego",
-    Authors: ["Under Dr. Boris Kramer"],
+    category: "ucsd",
+    authors: ["Under Dr. Boris Kramer"],
+    title: "UC San Diego",
     tags: ["My current research focuses on performing Reliability-Based Design Optimization of metamaterials for kinetic energy dissipation under high impact scenarios. \
            My work uses a discrete chain of unit cells comprised of masses, nonlinear springs, and dampers to represent the metamaterial. This MATLAB-based discrete element model \
-           simulates the dynamic response of the material by solving a coupled system of ordinary differential equations derived from the equations of motion. I work collaboratively within \
+           simulates the material's dynamic response by solving a coupled system of ordinary differential equations derived from the equations of motion. I work collaboratively within \
            the <a href='https://shape.ucsd.edu' target='_blank'>PSAAP SHAPE Center</a> at UCSD to bring the designs to life for experimental testing."],
   },
   {
-    category: "George Washington University",
-    Authors: ["Under Dr. Saniya LeBlanc"],
+    category: "gwu",
+    authors: ["Under Dr. Saniya LeBlanc"],
+    title: "George Washington University",
     tags: ["My research at the <a href='https://www.leblanclab.com/' target='_blank'>LeBlanc Lab</a> focused on investigating biological mechanisms that reduce hydrodynamic noise \
            in varying animal species for <a href='https://conep.engineering.gwu.edu/' target='_blank'>naval applications</a>. I used stereolithography (SLA) 3D printing to replace \
            surface textures for experimental testing in a laminar flow water channel. While at GWU, I also conducted an independent data science project, looking into the electrical loads \
