@@ -83,10 +83,10 @@ function renderPublicationEntries(container, items) {
     if (tags && tags.length) {
       const tagsEl = document.createElement("p");
       tagsEl.className = "pub-entry__tags";
-      tagsEl.textContent = tags.join(", ");
+      tagsEl.innerHTML = tags.join(" ");
       entry.appendChild(tagsEl);
     }
-
+    
     container.appendChild(entry);
   });
 }
