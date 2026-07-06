@@ -94,12 +94,16 @@ function renderPublicationEntries(container, items) {
 function populatePublicationsSection(allItems) {
   const preprints = (allItems || []).filter((p) => p.category === "preprints");
   const thesis = (allItems || []).filter((p) => p.category === "thesis");
+  const ucsd = (allItems || []).filter((p) => p.category === "ucsd");
+  const gwu = (allItems || []).filter((p) => p.category === "gwu");
   const preprintsSection = document.getElementById("research-preprints-section");
   const thesisSection = document.getElementById("research-thesis-section");
   if (preprintsSection) preprintsSection.style.display = preprints.length ? "" : "none";
   if (thesisSection) thesisSection.style.display = thesis.length ? "" : "none";
   renderPublicationEntries(document.getElementById("publications-preprints"), preprints);
   renderPublicationEntries(document.getElementById("publications-thesis"), thesis);
+  renderPublicationEntries(document.getElementById("publications-ucsd"), ucsd);
+  renderPublicationEntries(document.getElementById("publications-gwu"), gwu);
 }
 
 function populateNewsSection(items) {
