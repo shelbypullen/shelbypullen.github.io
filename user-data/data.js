@@ -37,7 +37,8 @@ export const publications = [
   {
     category: "ucsd",
     authors: ["Under Dr. Boris Kramer"],
-    title: "UC San Diego",
+    year: "",
+    title: "",
     tags: ["My current research focuses on performing Reliability-Based Design Optimization of metamaterials for kinetic energy dissipation under high impact scenarios. \
            My work uses a discrete chain of unit cells comprised of masses, nonlinear springs, and dampers to represent the metamaterial. This MATLAB-based discrete element model \
            simulates the material's dynamic response by solving a coupled system of ordinary differential equations derived from the equations of motion. I work collaboratively within \
@@ -46,7 +47,8 @@ export const publications = [
   {
     category: "gwu",
     authors: ["Under Dr. Saniya LeBlanc"],
-    title: "George Washington University",
+    year: "",
+    title: "",
     tags: ["My research at the <a href='https://www.leblanclab.com/' target='_blank'>LeBlanc Lab</a> focused on investigating biological mechanisms that reduce hydrodynamic noise \
            in varying animal species for <a href='https://conep.engineering.gwu.edu/' target='_blank'>naval applications</a>. I used stereolithography (SLA) 3D printing to replace \
            surface textures for experimental testing in a laminar flow water channel. While at GWU, I also conducted an independent data science project, looking into the electrical loads \
