@@ -29,8 +29,8 @@ function renderPublicationEntries(container, items) {
       const span = document.createElement("span");
       span.innerHTML =
         authors.length === 1
-          ? `<strong>${authors[0]}</strong> (${year}).`
-          : `<strong>${authors[0]}</strong>, ${authors.slice(1).join(", ")} (${year}).`;
+          ? `<strong>${authors[0]}</strong>${year ? ` (${year}).` : ""}`
+          : `<strong>${authors[0]}</strong>, ${authors.slice(1).join(", ")}${year ? ` (${year}).` : ""}`;
       authorsEl.appendChild(span);
     } else if (year) {
       authorsEl.textContent = `(${year}).`;
@@ -39,10 +39,14 @@ function renderPublicationEntries(container, items) {
 
     const titleWrap = document.createElement("p");
     titleWrap.className = "pub-entry__title-wrap";
+    
     const titleSpan = document.createElement("span");
     titleSpan.className = "pub-entry__title";
-    titleSpan.textContent = title + (status ? " " : ".");
-    titleWrap.appendChild(titleSpan);
+    if (title) {
+      titleSpan.textContent = title + (status ? " " : ".");
+      titleWrap.appendChild(titleSpan);
+    }
+    
     if (status) {
       const statusSpan = document.createElement("span");
       statusSpan.className = "pub-entry__status";
