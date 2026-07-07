@@ -225,6 +225,10 @@ a:hover {
   margin-top: 2rem;
 }
 
+#panel-research a {
+  text-decoration: underline;
+}
+
 /* News / Events list */
 .news-list {
   display: flex;
